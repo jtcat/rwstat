@@ -59,7 +59,7 @@ if [[ "$max_pid" -lt "$min_pid" ]]; then
 	exit 1
 fi
 
-if ! [[ -v 1 ]]; then
+if [[ -z "$1" ]]; then
 	printf "rwstat: No interval specified\n" >&2
 	exit 1
 elif ! is_numb $1; then
